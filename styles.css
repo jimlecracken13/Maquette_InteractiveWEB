@@ -1,0 +1,23 @@
+#accueil
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#name
+{
+    font-weight: bold;
+    font-family: 'poppins arial';
+}
+#main-content div
+{
+    padding-left:35% ;
+    
+}
+#main-content button
+{
+    border: 2px solid black;
+    width: 200px;
+    border-radius: 10px;
+}
