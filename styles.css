@@ -82,3 +82,100 @@ header p{
     }
     
 }
+/* Stylisation du cv à partir d'ici*/
+#cv-main
+{
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid black;
+    font-size: 4vh;
+}
+/*left représente la partie gauche de mon cv*/
+#left
+{
+    background-color: #F8F4F4;
+    width: 50%;
+    /*border:2px solid black;*/
+}
+#first-black
+{
+    background-color: #383434;
+    color:white;
+    text-align: center;
+    border: 1px solid black;
+    height: 50vh;
+    margin-top: 0%;
+    border-bottom-left-radius: 40vh;
+    border-bottom-right-radius: 40vh;
+
+}
+#first-black p:nth-child(1)
+{
+    font-weight: 900;
+}
+#first-black img{
+    width:19vw;
+    height:19vw;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+#contact
+{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 12%;
+    
+}
+#second-black
+{
+    background-color: #383434;
+    color: white;
+    margin-bottom: 0%;
+    height: 75vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 20%;
+    border-top-left-radius: 40vh;
+    border-top-right-radius: 40vh;
+    /*border: 2px solid yellow;*/
+}
+.sous-titre{
+    /*border: 2px solid black;*/
+    display: flex;
+    text-align:left;
+    font-size:1em;
+    font-weight: bold;
+}
+.icon-class
+{
+    width:1em;
+    margin-right: 1%;
+}
+#contactme
+{
+    display: flex;
+    font-size: 2em;
+    font-weight: bold;
+}
+.icon-class-address
+{
+    width: 1em;
+    height: 1em;
+    margin-right: 1%;
+}
+#right
+{
+    border: 2px solid red;
+    margin-left: 2%;
+}
+#langue-passion
+{
+    display: flex;
+}
