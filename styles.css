@@ -90,7 +90,7 @@ header p{
     padding-right: 2%;
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid black;
-    font-size: 4vh;
+    font-size: 3vh;
 }
 /*left représente la partie gauche de mon cv*/
 #left
@@ -116,8 +116,8 @@ header p{
     font-weight: 900;
 }
 #first-black img{
-    width:19vw;
-    height:19vw;
+    width:9em;
+    height:9em;
     border: 4px solid white;
     border-radius: 50%;
 }
@@ -139,9 +139,8 @@ header p{
     height: 75vh;
     margin-left: 2%;
     margin-right: 2%;
-    text-align: left;
     padding-left: 10%;
-    padding-top: 20%;
+    padding-top: 30%;
     border-top-left-radius: 40vh;
     border-top-right-radius: 40vh;
     /*border: 2px solid yellow;*/
@@ -161,7 +160,7 @@ header p{
 #contactme
 {
     display: flex;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
 }
 .icon-class-address
@@ -178,4 +177,8 @@ header p{
 #langue-passion
 {
     display: flex;
+    justify-content: space-between;
+}
+#langue-passion div{
+    border: 2px solid black;
 }
