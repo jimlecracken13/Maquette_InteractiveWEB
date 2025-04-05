@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
-    <title>MonCV</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
-   <main id="cv-main">
+<body id="cv-body">
+   <div id="cv-main">
         <div id="left">
             <div id="first-black">
                 <p>DIALLO AMADOU</p>
                 <p>DEV WEB/MOBILE</p>
-                <img src="profil.png" alt="photo de profil">
+                <img src="profil.png" alt="icone">
             </div>
             <div id="contact"> 
-                <span id="contactme"><img src="icones/utilisateur (1).png" alt="contact" class="icon-class-address">Contact Me</span>
-                <span class="contactme"><img src="icones/appel.png" alt="icones addresse" class="icon-class-address">+22384400026</span>
-                <span class="contactme"><img src="icones/addresse.png" class="icon-class-address" alt="lieu">Bamako,Titibougou</span>
+                <span class="contactme"><img src="icones/utilisateur (1).png" alt="icone" class="icon-class-address">Contact Me</span>
+                <span class="contactme"><img src="icones/appel.png" alt="icone" class="icon-class-address">+22384400026</span>
+                <span class="contactme"><img src="icones/phone-book_5657865.png" class="icon-class-address" alt="icone">Bamako,Titibougou</span>
             </div>
             <div id="second-black">
                 <section id="education">
-                    <span class="sous-titre"><img src="icones/education (2).png" alt="" class="icon-class"> EDUCATION</span>
+                    <span class="sous-titre"><img src="icones/education (2).png" alt="icone" class="icon-class"> EDUCATION</span>
                     <p>Faculté des Sciences de Sétif</p>
                     <p>Licence en Système d’informations</p>
                 </section>
                 <section id="references">
-                    <span class="sous-titre"><img src="icones/lien.png" alt="" class="icon-class"> REFERENCES</span>
+                    <span class="sous-titre"><img src="icones/knowledge_16828063.png" alt="icone" class="icon-class" 
+                        style="background-color: white; border-radius: 50%;"> 
+                        REFERENCES</span>
                     <p>Professeur Douidi</p>
                     <P>Tel: +22376412209</P>
                     <p>Email:douidi23@gmail.com</p>
@@ -40,7 +42,7 @@
                 <p>J’ai un dîplome en système d’informations. Je suis pationné par l’informatique et les technologies. Je suis curieux et studieux</p>
             </section>
             <section id="experience">
-                <span class="sous-titre"><img src="icones/mallette.png" alt="mallette" class="icon-class">EXPERIENCE</span>
+                <span class="sous-titre"><img src="icones/mallette.png" alt="icone" class="icon-class">EXPERIENCE</span>
                 <p>
                 <span style="display: block; font-weight: 700;">Dev full stack      2023-2023</span>
                 <span style="display: block;">EDM sa</span>
@@ -55,30 +57,32 @@
             <section id="competence">
                 
                 <span class="sous-titre">
-                    <img src="icones/icons8-coller-depuis-le-presse-papier-50.png" alt="" class="icon-class">
+                    <img src="icones/solution_8320675.png" alt="icone" class="icon-class">
                     COMPETENCE</span>
                 <div>
-                    HTML
-                    <div class="progressbar">
-                        <div></div>
+                    <div>
+                        HTML
+                        <div class="progressbar">
+                            <div></div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    Python
-                    <div class="progressbar">
-                        <div></div>
+                    <div>
+                        Python
+                        <div class="progressbar">
+                            <div></div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    JS
-                    <div class="progressbar">
-                        <div></div>
+                    <div>
+                        JS
+                        <div class="progressbar">
+                            <div></div>
+                        </div>
                     </div>
-                </div>
+                </div>  
             </section>
             <section id="langue-passion">
                 <div id="langue">
-                    <span class="sous-titre"><img src="icones/langue.png" alt="" class="icon-class"> LANGUE</span>
+                    <span class="sous-titre"><img src="icones/langue.png" alt="icone" class="icon-class"> LANGUE</span>
                     <ul>
                         <li>français</li>
                         <li>anglais</li>
@@ -86,14 +90,19 @@
                 </div>
                 <div id="passion">
 
-                    <span class="sous-titre"> <img src="" alt="" class="icon-class">PASSION</span>
+                    <span class="sous-titre"> <img src="icones/audio-book_10355468.png" alt="icone" class="icon-class">PASSION</span>
                     <ul>
-                        <li>codage</li>
-                        <li>anime</li>
+                        <li>CODAGE</li>
+                        <li>ANIME</li>
                     </ul>
                 </div>
             </section>
         </div>
-   </main>
+    </div>
+    <div id="button-div">
+        <button id="change-color" type="button" onclick="changeCouleur('left')">Couleur</button>
+        <button id="dowload" type="button" onclick="telechargeCV('cv-main')">Telecharger</button>
+        <button id="retour" type="button" onclick="retour('retour')">Retour</button>
+    </div>
 </body>
 </html>

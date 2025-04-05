@@ -89,15 +89,17 @@ header p{
     padding-left: 2%;
     padding-right: 2%;
     font-family: 'Courier New', Courier, monospace;
-    border: 2px solid black;
-    font-size: 3vh;
+    border: 4px solid black;
+    font-size: 2vh;
+    height:100vh;
 }
 /*left représente la partie gauche de mon cv*/
 #left
 {
     background-color: #F8F4F4;
-    width: 50%;
-    /*border:2px solid black;*/
+    width: 30%;
+    height: 100%;
+    
 }
 #first-black
 {
@@ -105,26 +107,26 @@ header p{
     color:white;
     text-align: center;
     border: 1px solid black;
-    height: 50vh;
+    height: 40%;
     margin-top: 0%;
-    border-bottom-left-radius: 40vh;
-    border-bottom-right-radius: 40vh;
-
+    border-bottom-left-radius: 45vh;
+    border-bottom-right-radius: 45vh;
+    /*border:2px solid rgb(190, 73, 73);*/
 }
 #first-black p:nth-child(1)
 {
     font-weight: 900;
 }
 #first-black img{
-    width:9em;
-    height:9em;
+    width:10em;
+    height:10em;
     border: 4px solid white;
     border-radius: 50%;
 }
+/*css pour le div de contact*/
 #contact
 {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,43 +138,51 @@ header p{
     background-color: #383434;
     color: white;
     margin-bottom: 0%;
-    height: 75vh;
+    height: 36.5%;
     margin-left: 2%;
     margin-right: 2%;
-    padding-left: 10%;
-    padding-top: 30%;
+    padding-left: 8%;
+    padding-top: 20%;
     border-top-left-radius: 40vh;
     border-top-right-radius: 40vh;
-    /*border: 2px solid yellow;*/
+    border: 2px solid yellow;
 }
+/*css pour les sous titre*/
 .sous-titre{
     /*border: 2px solid black;*/
     display: flex;
     text-align:left;
-    font-size:1em;
+    font-size:1.5em;
     font-weight: bold;
 }
+/*css pour les icones des sections*/
 .icon-class
 {
-    width:1em;
+    width:1.2em;
     margin-right: 1%;
 }
-#contactme
+.contactme
 {
     display: flex;
+    margin-bottom:0.5em;
+}
+.contactme:nth-child(1)
+{
     font-size: 1em;
     font-weight: bold;
 }
 .icon-class-address
 {
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
     margin-right: 1%;
 }
 #right
 {
     /*border: 2px solid red;*/
     margin-left: 2%;
+    height: 100vh;
+    width: 70%;
 }
 #langue-passion
 {
@@ -180,12 +190,20 @@ header p{
     justify-content:flex-start;
     gap:2em;
 }
-#competence div
+/*css pour mettre le texte en majuscule*/
+#langue ul li
 {
-    display: flex;
-    justify-content: flex-start;
+    text-transform: uppercase;
+}
+#competence>div
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 0.5em;
+    /*border: 2px solid red;*/
     gap: 2em;
 }
+/*La bar de compétence*/
 .progressbar
 {
     width: 5em;
@@ -203,10 +221,76 @@ header p{
     background-color: black;
     margin:0;
 }
-@media(max-width:1116px)
+/*stylisation appliqué aux sections*/
+section{
+    margin-bottom: 0.5em;
+}
+/*animation des différentes sections*/
+section:hover
+{
+    border:2px solid black;
+    border-radius: 0.5em;
+}
+/*css pour les buttons*/
+#button-div
+{
+    display: flex;
+    gap:2em;
+    border: 2px solid red;
+    margin-top: 1em;
+    padding: 1em;
+}
+#button-div button
+{
+    width: 15em;
+    height: 2em;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 0.5em;
+}
+#button-div button:hover{
+    animation: border-animation 1s ease-in-out 0.5s infinite;
+}
+@keyframes border-animation {
+    0%{
+        border-bottom:4px solid #73b8d8;
+    }
+    25%{
+        border-left:2px solid rgb(213, 23, 23);
+    }
+    50%
+    {
+        border-top: 2px solid rgb(232, 26, 26);
+    }
+    100%{
+        border-right: 2px solid rgb(228, 31, 31);
+    }
+}
+@media(max-width:768px)
 {
     #cv-main{
-        width: 100%;
-        background-color: #decdcd;
+        font-size: 2.1vw;
     }
+    #first-black {
+        height: 25%; /* Réduire la hauteur */
+    }
+    #contact{
+        height: 25;
+    }
+    #second-black {
+        height: 64%; /* Réduire la hauteur */
+    }
+
+    #first-black img {
+        width: 10em; /* Réduire la taille de l'image */
+        height: 10em; /* Réduire la taille de l'image */
+    }
+    .sous-titre {
+        font-size: 1.5em; /* Réduire la taille des sous-titres sur petits écrans */
+    }
+
+    .icon-class {
+        width: 1em; /* Réduire la taille des icônes */}
 }
