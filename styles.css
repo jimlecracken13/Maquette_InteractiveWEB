@@ -49,6 +49,7 @@ header p{
     font-size: 100%;
     color: white;
     font-weight: bold;
+    transition: transform 0.5s ease-in-out;
 }
 /*animation au touché*/
 #main-content  button:hover
@@ -118,8 +119,8 @@ header p{
     font-weight: 900;
 }
 #first-black img{
-    width:10em;
-    height:10em;
+    width:25vh;
+    height:25vh;
     border: 4px solid white;
     border-radius: 50%;
 }
@@ -143,9 +144,14 @@ header p{
     margin-right: 2%;
     padding-left: 8%;
     padding-top: 20%;
+    padding-right: 5%;
     border-top-left-radius: 40vh;
     border-top-right-radius: 40vh;
     border: 2px solid yellow;
+}
+#second-black p{
+    border: 2px solid green;
+    
 }
 /*css pour les sous titre*/
 .sous-titre{
@@ -154,6 +160,11 @@ header p{
     text-align:left;
     font-size:1.5em;
     font-weight: bold;
+    transition: border 0.5s ease-in-out;
+}
+.sous-titre:hover
+{
+    border-bottom: 4px solid black;
 }
 /*css pour les icones des sections*/
 .icon-class
@@ -202,34 +213,26 @@ header p{
     margin-bottom: 0.5em;
     /*border: 2px solid red;*/
     gap: 2em;
+    border:2px solid blue;
+}
+#competence>div div
+{
+    background-color: gray;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border:2px solid red;
 }
 /*La bar de compétence*/
 .progressbar
 {
-    width: 5em;
-    height: 0.3em;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 1em;
-    display: inline-block;
-}
-.progressbar div{
-    width:60%;
-    height: 40%;
-    border:2px solid black;
-    border-radius: 1em;
-    background-color: black;
-    margin:0;
+    margin:2px;
+    color: black;
 }
 /*stylisation appliqué aux sections*/
 section{
-    margin-bottom: 0.5em;
-}
-/*animation des différentes sections*/
-section:hover
-{
-    border:2px solid black;
-    border-radius: 0.5em;
+    margin-bottom: 2em;
 }
 /*css pour les buttons*/
 #button-div
@@ -249,35 +252,29 @@ section:hover
     font-size: 1em;
     font-weight: bold;
     border-radius: 0.5em;
+    transition:border 0.5s ease ;
 }
 #button-div button:hover{
-    animation: border-animation 1s ease-in-out 0.5s infinite;
+    border:4px solid black;
+    color:black;
+    background-color: white;
 }
-@keyframes border-animation {
-    0%{
-        border-bottom:4px solid #73b8d8;
-    }
-    25%{
-        border-left:2px solid rgb(213, 23, 23);
-    }
-    50%
-    {
-        border-top: 2px solid rgb(232, 26, 26);
-    }
-    100%{
-        border-right: 2px solid rgb(228, 31, 31);
-    }
-}
-@media(max-width:768px)
+
+@media only screen and (max-width:768px)
 {
     #cv-main{
         font-size: 2.1vw;
     }
+    #left
+    {
+        overflow:hidden;
+    }
     #first-black {
         height: 25%; /* Réduire la hauteur */
+        padding-top: 10em;
     }
     #contact{
-        height: 25;
+        height: 10%;
     }
     #second-black {
         height: 64%; /* Réduire la hauteur */
@@ -293,4 +290,39 @@ section:hover
 
     .icon-class {
         width: 1em; /* Réduire la taille des icônes */}
+    .progressbar
+    {
+        width:5em;
+    }
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) {
+    #cv-main{
+        font-size: 2.1vw;
+    }
+    #left
+    {
+        overflow:hidden;
+    }
+    #first-black {
+        height: 25%; /* Réduire la hauteur */
+        padding-top: 5em;
+    }
+    #first-black img {
+        width: 10em; /* Réduire la taille de l'image */
+        height: 10em; /* Réduire la taille de l'image */
+    }
+    #second-black {
+        height: 58%; /* Réduire la hauteur */
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #left
+    {
+        overflow:hidden;
+    }
+    #second-black{
+        height: 40%;
+    }
+  }
+
