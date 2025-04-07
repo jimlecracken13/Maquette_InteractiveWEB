@@ -84,23 +84,31 @@ header p{
     
 }
 /* Stylisation du cv à partir d'ici*/
+#cv-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #cv-main
 {
-    display: flex;
-    padding-left: 2%;
-    padding-right: 2%;
-    font-family: 'Courier New', Courier, monospace;
-    border: 4px solid black;
-    font-size: 2vh;
-    height:100vh;
+   width: 790px;
+   height: 1100px;
+   border: 2px solid rgb(224, 218, 218);
+   display: flex;
+   padding-left: 1%;
+   padding-right: 1%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 1vw;
 }
 /*left représente la partie gauche de mon cv*/
 #left
 {
     background-color: #F8F4F4;
     width: 30%;
-    height: 100%;
-    
+    margin-right: 2%; 
+    border:2px solid black;
+    overflow: hidden;
 }
 #first-black
 {
@@ -108,10 +116,11 @@ header p{
     color:white;
     text-align: center;
     border: 1px solid black;
-    height: 40%;
+    height: 20%;
     margin-top: 0%;
     border-bottom-left-radius: 45vh;
     border-bottom-right-radius: 45vh;
+    padding-top: 25px;
     /*border:2px solid rgb(190, 73, 73);*/
 }
 #first-black p:nth-child(1)
@@ -119,10 +128,11 @@ header p{
     font-weight: 900;
 }
 #first-black img{
-    width:25vh;
-    height:25vh;
+    width:9vw;
+    height:9vw;
     border: 4px solid white;
     border-radius: 50%;
+    
 }
 /*css pour le div de contact*/
 #contact
@@ -132,6 +142,7 @@ header p{
     flex-direction: column;
     justify-content: center;
     padding-left: 12%;
+    height: 20%;
     
 }
 #second-black
@@ -139,20 +150,21 @@ header p{
     background-color: #383434;
     color: white;
     margin-bottom: 0%;
-    height: 36.5%;
+    height: 60%;
     margin-left: 2%;
     margin-right: 2%;
     padding-left: 8%;
-    padding-top: 20%;
+    padding-top: 25%;
     padding-right: 5%;
     border-top-left-radius: 40vh;
     border-top-right-radius: 40vh;
-    border: 2px solid yellow;
+    /*border: 2px solid yellow;*/
 }
+/*
 #second-black p{
-    border: 2px solid green;
+   border: 2px solid green;
     
-}
+}*/
 /*css pour les sous titre*/
 .sous-titre{
     /*border: 2px solid black;*/
@@ -191,9 +203,12 @@ header p{
 #right
 {
     /*border: 2px solid red;*/
-    margin-left: 2%;
-    height: 100vh;
     width: 70%;
+    padding-top: 5%;
+    /*border: 2px solid red;*/
+}
+#right section{
+    margin-bottom: 10%;
 }
 #langue-passion
 {
@@ -211,18 +226,17 @@ header p{
     display: grid;
     grid-template-columns: auto auto;
     margin-bottom: 0.5em;
-    /*border: 2px solid red;*/
+    /*border: 2px solid blue;*/
     gap: 2em;
-    border:2px solid blue;
 }
 #competence>div div
 {
-    background-color: gray;
-    width: 60%;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-direction:row;
+    justify-content:space-around;
     align-items: center;
-    border:2px solid red;
+    /*border:2px solid red;*/
 }
 /*La bar de compétence*/
 .progressbar
@@ -239,7 +253,7 @@ section{
 {
     display: flex;
     gap:2em;
-    border: 2px solid red;
+    border: 2px solid black;
     margin-top: 1em;
     padding: 1em;
 }
@@ -259,70 +273,24 @@ section{
     color:black;
     background-color: white;
 }
-
-@media only screen and (max-width:768px)
-{
+/*Responsive queries*/
+@media print{
     #cv-main{
-        font-size: 2.1vw;
+        font-size: 2vw;
+        width:750px;
+        height: 1005px;
+        border: 2px solid grey;
     }
-    #left
-    {
-        overflow:hidden;
-    }
-    #first-black {
-        height: 25%; /* Réduire la hauteur */
-        padding-top: 10em;
-    }
-    #contact{
-        height: 10%;
-    }
-    #second-black {
-        height: 64%; /* Réduire la hauteur */
-    }
-
-    #first-black img {
-        width: 10em; /* Réduire la taille de l'image */
-        height: 10em; /* Réduire la taille de l'image */
-    }
-    .sous-titre {
-        font-size: 1.5em; /* Réduire la taille des sous-titres sur petits écrans */
-    }
-
-    .icon-class {
-        width: 1em; /* Réduire la taille des icônes */}
-    .progressbar
-    {
-        width:5em;
-    }
-}
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 992px) {
-    #cv-main{
-        font-size: 2.1vw;
-    }
-    #left
-    {
-        overflow:hidden;
-    }
-    #first-black {
-        height: 25%; /* Réduire la hauteur */
-        padding-top: 5em;
-    }
-    #first-black img {
-        width: 10em; /* Réduire la taille de l'image */
-        height: 10em; /* Réduire la taille de l'image */
-    }
-    #second-black {
-        height: 58%; /* Réduire la hauteur */
-    }
-}
-@media only screen and (min-width: 1024px) {
-    #left
-    {
-        overflow:hidden;
+    #first-black img{
+        width: 7em;
+        height:7em;
     }
     #second-black{
-        height: 40%;
+        color: black;
+        border: 2px solid black;
     }
-  }
+    #button-div{
+        display: none;
+    }
+}
 

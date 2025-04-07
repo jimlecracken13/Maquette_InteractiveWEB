@@ -15,8 +15,8 @@ function changeCouleur()
 }
 function telechargeCV(id)
 {
-    var element = document.getElementById(id);
-    var opt = {
+    let element = document.getElementById(id);
+    let opt = {
     margin:       1,//pour les marges du pdf
     filename:     'cv.pdf',//pour le nom du fichier
     image:        { type: 'jpeg', quality: 0.98 },
@@ -27,6 +27,7 @@ function telechargeCV(id)
 
     // New Promise-based usage:
     html2pdf().set(opt).from(element).save();
+    console.log(element);
 }
 function retour()
 {
