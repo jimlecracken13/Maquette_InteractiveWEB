@@ -276,14 +276,14 @@ section{
 /*Responsive queries*/
 @media print{
     #cv-main{
-        font-size: 2vw;
+        font-size: 15px;
         width:750px;
         height: 1005px;
         border: 2px solid grey;
     }
     #first-black img{
-        width: 7em;
-        height:7em;
+        width: 100px;
+        height:100px;
     }
     #second-black{
         color: black;
