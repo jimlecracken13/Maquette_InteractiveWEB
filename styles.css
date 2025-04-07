@@ -89,17 +89,18 @@ header p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: azure;
 }
 #cv-main
 {
    width: 790px;
    height: 1100px;
-   border: 2px solid rgb(224, 218, 218);
    display: flex;
    padding-left: 1%;
    padding-right: 1%;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 1vw;
+   background-color: white;
 }
 /*left représente la partie gauche de mon cv*/
 #left
@@ -253,7 +254,7 @@ section{
 {
     display: flex;
     gap:2em;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     margin-top: 1em;
     padding: 1em;
 }
@@ -301,16 +302,36 @@ section{
     }
    
 }
+@media screen and (max-width:992px)
+{
+    #first-black{
+        padding-top:30%;
+    }
+    #first-black img{
+        width: 19vw;
+        height:19vw;
+    }
+}
+@media screen and (max-width:1200px)
+{
+    #first-black{
+        
+    }
+}
 @media print{
     @page {
         size: A4;
         margin: 0; /* ou 10mm si tu veux un peu d'espace */
     }
+    #cv-body{
+        height: 100vh;
+    }
     #cv-main{
         font-size: 15px;
         width:750px;
-        height: 1005px;
-        border: 2px solid grey;
+        height: 1000px;
+        /*border: 2px solid grey;*/
+
     }
     #first-black img{
         width: 100px;
