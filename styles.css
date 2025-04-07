@@ -274,7 +274,38 @@ section{
     background-color: white;
 }
 /*Responsive queries*/
+@media screen and (max-width:768px)
+{
+    #cv-main{
+        width: 100vw;
+        border:2px solid black;
+        font-size:0.5em;
+    }
+    #first-black{
+        padding-top: 5%;
+        height: 15%;
+    }
+    #first-black img
+    {
+        width:20vw;
+        height:20vw;
+        margin-bottom: 0%;
+    }
+    #second-black{
+        padding-top: 45%;
+        padding-left:3%;
+    }
+    #button-div{
+        width:100vw;
+        gap:1em;
+    }
+   
+}
 @media print{
+    @page {
+        size: A4;
+        margin: 0; /* ou 10mm si tu veux un peu d'espace */
+    }
     #cv-main{
         font-size: 15px;
         width:750px;
