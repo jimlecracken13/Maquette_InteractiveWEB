@@ -13,23 +13,32 @@ function changeCouleur()
     document.getElementById("right").style.color="white";
     console.log("click")
 }
-function telechargeCV(id)
+function telechargeCV(id) 
 {
     let element = document.getElementById(id);
     let opt = {
-    margin:       1,//pour les marges du pdf
-    filename:     'cv.pdf',//pour le nom du fichier
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF:        { unit: '', format: 'a4', orientation: 'portrait' },
-    pagebreak:    {mode: ['avoid-all','css','legacy']}
+        margin: 0, // Marges réduites au minimum
+        filename: 'cv.pdf',
+        image: { type: 'jpeg', quality: 1 }, // Qualité max
+        html2canvas: { 
+            scale: 2, // Augmenté pour meilleure qualité
+            scrollX: 250,
+            scrollY: 0,
+            windowWidth: element.scrollWidth,
+            windowHeight: element.scrollHeight,
+            useCORS: true, //pour la securité concernant les liens externes
+        },
+        jsPDF: { 
+            unit: 'mm', 
+            format: 'a4', 
+            orientation: 'portrait',
+        },
+        
     };
 
-    // New Promise-based usage:
     html2pdf().set(opt).from(element).save();
-    console.log(element);
 }
 function retour()
 {
-    window.location.href='index.html'
+    window.location.href='index.html';
 }
