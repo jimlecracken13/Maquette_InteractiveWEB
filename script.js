@@ -2,16 +2,19 @@ function cv()
 {
     window.location.href='cv.html'
 }
-function changeCouleur()
+
+function changeColor(value)
 {
-    document.getElementById("left").style.backgroundColor='#73b8d8';
-    document.getElementById("first-black").style.backgroundColor="white";
-    document.getElementById("first-black").style.color="black";
-    document.getElementById("second-black").style.backgroundColor="white";
-    document.getElementById("second-black").style.color="black";
-    document.getElementById("right").style.backgroundColor="#594E59";
-    document.getElementById("right").style.color="white";
-    console.log("click")
+    let body = document.getElementById('cv-body')
+    body.style.setProperty("--left-bg", value);
+    body.style.setProperty("--haut-bas", "white");
+    body.style.setProperty("--progressbar", value)
+    if(value==="#000000")
+    {
+        body.style.setProperty("--left-bg", "#F8F4F4");
+    }
+    document.getElementById('first-black').style.color="black";
+    document.getElementById('second-black').style.color="black";
 }
 function telechargeCV(id) 
 {

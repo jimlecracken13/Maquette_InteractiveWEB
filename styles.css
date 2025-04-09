@@ -83,6 +83,14 @@ header p{
     }
     
 }
+/* declaration d'une variable en css*/
+#cv-body{
+    --left-bg:#F8F4F4;
+    --right-bg: white;
+    --haut-bas:black;
+    --progressbar:rgb(85, 149, 176);
+
+}
 /* Stylisation du cv à partir d'ici*/
 #cv-body{
     display: flex;
@@ -105,20 +113,19 @@ header p{
 /*left représente la partie gauche de mon cv*/
 #left
 {
-    background-color: #F8F4F4;
+    background-color:var(--left-bg);/* utilisation d'une variable */
     width: 30%;
     margin-right: 2%; 
     overflow: hidden;
 }
 #first-black
 {
-    background-color: #383434;
+    background-color: var(--haut-bas);
     color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
     height: 20%;
     margin-top: 0%;
     border-bottom-left-radius: 45vh;
@@ -154,7 +161,7 @@ header p{
 }
 #second-black
 {
-    background-color: #383434;
+    background-color: var(--haut-bas);
     color: white;
     margin-bottom: 0%;
     height: 60%;
@@ -179,7 +186,7 @@ header p{
     text-align:left;
     font-size:1.5em;
     font-weight: bold;
-    transition: border 0.5s ease-in-out;
+    transition: border 0.1s ease-in-out;
 }
 .sous-titre:hover
 {
@@ -196,10 +203,8 @@ header p{
     display: flex;
     margin-bottom:0.5em;
 }
-.contactme:nth-child(1)
-{
-    font-size: 1em;
-    font-weight: bold;
+#contact span:nth-child(1){
+    margin-bottom:1em;
 }
 .icon-class-address
 {
@@ -212,7 +217,7 @@ header p{
     /*border: 2px solid red;*/
     width: 70%;
     padding-top: 5%;
-    /*border: 2px solid red;*/
+    background-color: var(--right-bg);
 }
 #right section{
     margin-bottom: 10%;
@@ -220,8 +225,12 @@ header p{
 #langue-passion
 {
     display: flex;
-    justify-content:flex-start;
-    gap:30%;
+    /* justify-content:flex-start; */
+    gap: 2em;
+}
+#langue-passion div
+{
+    width:80%;
 }
 /*css pour mettre le texte en majuscule*/
 #langue ul li
@@ -257,9 +266,9 @@ header p{
     border-radius:5px;
     overflow:hidden;
 }
-.progressbar div{
+.second-div{
     width:70%;
-    background-color: rgb(85, 149, 176);
+    background-color:var(--progressbar);
     height: 100%;
 }
 /*stylisation appliqué aux sections*/
@@ -274,6 +283,12 @@ section{
     /*border: 2px solid black;*/
     margin-top: 1em;
     padding: 1em;
+}
+#color{
+    width: 15em;
+    height: 2em;
+    border-radius: 0.5em;
+    background-color: black;
 }
 #button-div button
 {
